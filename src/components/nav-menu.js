@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import './nav-menu.css'
+import "./nav-menu.css";
 
 const NavMenu = (props) => {
   return (
@@ -105,20 +105,24 @@ const NavMenu = (props) => {
             </div>
           </li>
           <li data-thq="thq-dropdown" className="nav-menu-dropdown05 list-item">
-            <div
-              data-thq="thq-dropdown-toggle"
-              className="nav-menu-dropdown-toggle07"
-            >
-              <span className="nav-menu-text12">MediPal</span>
-            </div>
+            <Link to="/projects/medipal">
+              <div
+                data-thq="thq-dropdown-toggle"
+                className="nav-menu-dropdown-toggle07"
+              >
+                <span className="nav-menu-text12">MediPal</span>
+              </div>
+            </Link>
           </li>
           <li data-thq="thq-dropdown" className="nav-menu-dropdown06 list-item">
-            <div
-              data-thq="thq-dropdown-toggle"
-              className="nav-menu-dropdown-toggle08"
-            >
-              <span className="nav-menu-text13">Morphine</span>
-            </div>
+            <Link to="/projects/morphine">
+              <div
+                data-thq="thq-dropdown-toggle"
+                className="nav-menu-dropdown-toggle08"
+              >
+                <span className="nav-menu-text13">Morphine</span>
+              </div>
+            </Link>
           </li>
           <li data-thq="thq-dropdown" className="nav-menu-dropdown07 list-item">
             <div
@@ -129,12 +133,14 @@ const NavMenu = (props) => {
             </div>
           </li>
           <li data-thq="thq-dropdown" className="nav-menu-dropdown08 list-item">
-            <div
-              data-thq="thq-dropdown-toggle"
-              className="nav-menu-dropdown-toggle10"
-            >
-              <span className="nav-menu-text15">Physion</span>
-            </div>
+            <Link to="/projects/physion">
+              <div
+                data-thq="thq-dropdown-toggle"
+                className="nav-menu-dropdown-toggle10"
+              >
+                <span className="nav-menu-text15">Physion</span>
+              </div>
+            </Link>
           </li>
           <li
             data-thq="thq-dropdown"
@@ -213,21 +219,21 @@ const NavMenu = (props) => {
       <span className="nav-menu-text21">{props.text3}</span>
       <span className="nav-menu-text22">{props.text4}</span>
     </nav>
-  )
-}
+  );
+};
 
 NavMenu.defaultProps = {
-  text5: 'Publicity Subcomm',
-  text1: 'Publicity Subcomm',
-  text3: 'Merchandise',
-  rootClassName: '',
-  text7: 'Event Organisers',
-  text6: 'Projects',
-  text: 'Home',
-  text4: 'Join Us',
-  text2: 'Events',
-  text21: 'Events',
-}
+  text5: "Publicity Subcomm",
+  text1: "Publicity Subcomm",
+  text3: "Merchandise",
+  rootClassName: "",
+  text7: "Event Organisers",
+  text6: "Projects",
+  text: "Home",
+  text4: "Join Us",
+  text2: "Events",
+  text21: "Events",
+};
 
 NavMenu.propTypes = {
   text5: PropTypes.string,
@@ -240,6 +246,6 @@ NavMenu.propTypes = {
   text4: PropTypes.string,
   text2: PropTypes.string,
   text21: PropTypes.string,
-}
+};
 
-export default NavMenu
+export default NavMenu;

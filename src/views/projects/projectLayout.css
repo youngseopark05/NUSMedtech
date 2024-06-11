@@ -64,20 +64,20 @@
   align-items: center;
   text-align: center;
   padding-top: 80px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 .intro-target-title {
   font-family: "Lato";
-  font-weight: 400;
-  font-size: 3.5rem;
+  font-weight: 800;
+  font-size: 4.5rem;
 }
 
 .intro-target-text {
-  margin-top: 20px;
+  margin-top: 40px;
   font-family: "Lato";
-  font-weight: 800;
-  font-size: 5rem;
+  font-weight: 600;
+  font-size: 4rem;
 }
 
 .intro-problem-container {
@@ -91,7 +91,7 @@
   font-weight: 600;
   font-style: italic;
   font-size: 2.5rem;
-  line-height: rem;
+  line-height: 3rem;
 }
 
 .desc-container {
@@ -101,7 +101,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
 }
 
 .desc-title {
@@ -135,10 +134,6 @@
   justify-content: center;
 }
 
-.awards-container {
-  margin-bottom: 40px;
-}
-
 .partnership-container {
   background-color: rgb(211, 242, 253);
   padding-top: 80px;
@@ -150,12 +145,13 @@
   font-family: "Lato";
   font-weight: 800;
   font-size: 5rem;
+  margin-top: 40px;
 }
 
 .awards-list,
 .partnership-list {
   margin-top: 40px;
-
+  margin-bottom: 40px;
 }
 
 .awards-item,

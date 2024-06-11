@@ -40,22 +40,26 @@ export default function ProjectLayout({
         <div className="desc-title">About us:</div>
         <div className="desc-text">{projectDescription}</div>
       </div>
-      <div className="awards-container">
-        <div className="awards-title">Awards</div>
-        <div className="awards-list">
-          {projectAwards.map((award, index) => (
-            <AwardItem award={award} key={index} />
-          ))}
+      {projectAwards && (
+        <div className="awards-container">
+          <div className="awards-title">Awards</div>
+          <div className="awards-list">
+            {projectAwards.map((award, index) => (
+              <AwardItem award={award} key={index} />
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="partnership-container">
-        <div className="partnership-title">Our partners</div>
-        <div className="partnership-list">
-          {projectPartnership.map((partner, index) => (
-            <PartnerItem partner={partner} key={index} />
-          ))}
+      )}
+      {projectPartnership && (
+        <div className="partnership-container">
+          <div className="partnership-title">Our partners</div>
+          <div className="partnership-list">
+            {projectPartnership.map((partner, index) => (
+              <PartnerItem partner={partner} key={index} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
       <Footer></Footer>
     </div>
   );

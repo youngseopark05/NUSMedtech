@@ -1,4 +1,7 @@
-import "@/views/projects/projectLayout.css";
+import "./projectLayout.css";
+import { Helmet } from "react-helmet";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 
 export default function ProjectLayout({
   projectTitle,
@@ -10,18 +13,58 @@ export default function ProjectLayout({
   projectPartnership,
 }) {
   return (
-    <div class="project-container">
-      <div class="title-container">{projectTitle}</div>
-      <div class="picture-container">
-        <img src={projectPicture} alt={`Project picture for ${projectTitle}`} />
+    <div className="project-page-container">
+      <Helmet>
+        <title>Project {projectTitle}</title>
+        <meta property="og:title" content={`Project ${projectTitle}`} />
+      </Helmet>
+      <Header rootClassName="header-root-class-name5"></Header>
+      <div
+        className="project-page-hero"
+        style={{ backgroundImage: `url(${projectPicture})` }}
+      >
+        <h1 className="project-page-text">
+          Project <br /> {projectTitle}
+        </h1>
       </div>
-      <div class="intro-container">
-        <div class="intro-target-audience">{projectTarget}</div>
-        <div class="intro-problem">{projectProblem}</div>
+      <div className="intro-container">
+        <div className="intro-target-container">
+          <div className="intro-target-title">We are helping</div>
+          <div className="intro-target-text">{projectTarget}</div>
+        </div>
+        <div className="intro-problem-container">
+          <div>"{projectProblem}"</div>
+        </div>
       </div>
-      <div class="desc-container">{projectDescription}</div>
-      <div class="awards-container">{projectAwards}</div>
-      <div class="partnership-container">{projectPartnership}</div>
+      <div className="desc-container">
+        <div className="desc-title">About us:</div>
+        <div classNAme="desc-text">{projectDescription}</div>
+      </div>
+      <div className="awards-container">
+        <div className="awards-title">Awards</div>
+        <div className="awards-list">
+          {projectAwards.map((award, index) => (
+            <AwardItem award={award} key={index} />
+          ))}
+        </div>
+      </div>
+      <div className="partnership-container">
+        <div className="partnership-title">Our partners</div>
+        <div className="partnership-list">
+          {projectPartnership.map((partner, index) => (
+            <PartnerItem partner={partner} key={index} />
+          ))}
+        </div>
+      </div>
+      <Footer></Footer>
     </div>
   );
+}
+
+function AwardItem({ award }) {
+  return <div className="awards-item">{award}</div>;
+}
+
+function PartnerItem({ partner }) {
+  return <div className="partnership-item">{partner}</div>;
 }

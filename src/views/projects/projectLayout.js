@@ -38,7 +38,7 @@ export default function ProjectLayout({
       </div>
       <div className="desc-container">
         <div className="desc-title">About us:</div>
-        <div classNAme="desc-text">{projectDescription}</div>
+        <div className="desc-text">{projectDescription}</div>
       </div>
       <div className="awards-container">
         <div className="awards-title">Awards</div>

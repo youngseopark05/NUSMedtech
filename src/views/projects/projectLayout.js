@@ -33,7 +33,7 @@ export default function ProjectLayout({
           <div className="intro-target-text">{projectTarget}</div>
         </div>
         <div className="intro-problem-container">
-          <div>"{projectProblem}"</div>
+          <div className="intro-problem-text">"{projectProblem}"</div>
         </div>
       </div>
       <div className="desc-container">

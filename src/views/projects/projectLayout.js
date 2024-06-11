@@ -29,7 +29,9 @@ export default function ProjectLayout({
       </div>
       <div className="intro-container">
         <div className="intro-target-container">
-          <div className="intro-target-title">We are helping...</div>
+          <div className="intro-target-title">
+            Project {projectTitle} is for:
+          </div>
           <div className="intro-target-text">[{projectTarget}]</div>
         </div>
         <div className="intro-problem-container">
